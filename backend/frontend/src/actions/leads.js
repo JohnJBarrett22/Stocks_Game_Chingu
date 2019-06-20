@@ -5,7 +5,7 @@ import { GET_LEADS, DELETE_LEAD, ADD_LEAD, GET_ERRORS } from './types';
 
 //GET LEADS
 export const getLeads = () => dispatch => {
-    axios.get('/api/users/')
+    axios.get('/api/leads/')
     .then(res => {
         dispatch({
             type: GET_LEADS,
@@ -16,9 +16,9 @@ export const getLeads = () => dispatch => {
 
 //DELETE LEAD
 export const deleteLead = id => dispatch => {
-    axios.delete(`/api/users/${id}/`)
+    axios.delete(`/api/leads/${id}/`)
     .then(res => {
-        dispatch(createMessage({ deleteUser: 'User Deleted'}));
+        dispatch(createMessage({ deleteLead: 'Lead Deleted'}));
         dispatch({
             type: DELETE_LEAD,
             payload: id
@@ -27,10 +27,10 @@ export const deleteLead = id => dispatch => {
 }
 
 //ADD LEAD
-export const addLead = (user) => dispatch => {
-    axios.post('/api/users/', user)
+export const addLead = (lead) => dispatch => {
+    axios.post('/api/leads/', lead)
     .then(res => {
-        dispatch(createMessage({ addUser: 'User Added'}));
+        dispatch(createMessage({ addLead: 'Lead Added'}));
         dispatch({
             type: ADD_LEAD,
             payload: res.data

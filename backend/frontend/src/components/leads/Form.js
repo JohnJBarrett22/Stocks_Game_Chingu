@@ -21,8 +21,8 @@ export class Form extends Component {
     onSubmit = e => {
         e.preventDefault();
         const { firstName, lastName, userName, email, password } = this.state;
-        const user = { firstName, lastName, userName, email, password }
-        this.props.addLead(user)
+        const lead = { firstName, lastName, userName, email, password }
+        this.props.addLead(lead)
         this.setState({
             firstName: '',
             lastName: '',
@@ -37,7 +37,7 @@ export class Form extends Component {
         const { firstName, lastName, userName, email, password } = this.state;  
         return (
             <div className="card card-body mt-4 mb-4">
-                <h2>Add User</h2>
+                <h2>Add Lead</h2>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>First Name</label>

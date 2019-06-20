@@ -1,7 +1,7 @@
 from rest_framework import routers
-from . api import UserViewSet
+from . api import LeadViewSet
 
 router = routers.DefaultRouter()
-router.register('api/users', UserViewSet, 'users')
+router.register('api/leads', LeadViewSet, 'leads')
 
 urlpatterns = router.urls

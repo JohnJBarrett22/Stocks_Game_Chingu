@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from stocks_app.models import User
+from stocks_app.models import Lead
 
-class UserSerializer(serializers.ModelSerializer):
+class LeadSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = Lead
         fields = '__all__'
