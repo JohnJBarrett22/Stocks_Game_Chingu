@@ -23,6 +23,13 @@ export class Form extends Component {
         const { firstName, lastName, userName, email, password } = this.state;
         const user = { firstName, lastName, userName, email, password }
         this.props.addLead(user)
+        this.setState({
+            firstName: '',
+            lastName: '',
+            userName: '',
+            email: '',
+            password: ''
+        })
         console.log('Submitted');
     };
 
