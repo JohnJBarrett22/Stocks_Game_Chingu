@@ -20,6 +20,7 @@ export class Register extends Component {
         const { username, email, password, password2 } = this.state
         return (
             <div className="card card-body mt-4 mb-4">
+                <h2>Register</h2>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label>Userame</label>
@@ -34,7 +35,7 @@ export class Register extends Component {
                         <input className="form-control" type="text" name="password" onChange={this.onChange} value={password}/> 
                     </div>
                     <div className="form-group">
-                        <label>Email</label>
+                        <label>Confirm Password</label>
                         <input className="form-control" type="email" name="password2" onChange={this.onChange} value={password2}/> 
                     </div>
                 </form>
