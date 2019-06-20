@@ -26,7 +26,12 @@ export class Alerts extends Component {
             }
         }
         if(message !== prevProps.message) {
-            if(message.deleteUser) alert.success(message.deleteUser);
+            if(message.deleteUser) {
+                alert.success(message.deleteUser);
+            }
+            if(message.addUser) {
+                alert.success(message.addUser);
+            }
         }
     }
 

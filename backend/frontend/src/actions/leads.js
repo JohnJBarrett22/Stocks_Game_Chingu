@@ -30,6 +30,7 @@ export const deleteLead = id => dispatch => {
 export const addLead = (user) => dispatch => {
     axios.post('/api/users/', user)
     .then(res => {
+        dispatch(createMessage({ addUser: 'User Added'}));
         dispatch({
             type: ADD_LEAD,
             payload: res.data
