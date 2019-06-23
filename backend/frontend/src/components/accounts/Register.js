@@ -28,16 +28,20 @@ export class Register extends Component {
                     </div>
                     <div className="form-group">
                         <label>Email</label>
-                        <input className="form-control" type="text" name="email" onChange={this.onChange} value={email}/> 
+                        <input className="form-control" type="email" name="email" onChange={this.onChange} value={email}/> 
                     </div>
                     <div className="form-group">
                         <label>Password</label>
-                        <input className="form-control" type="text" name="password" onChange={this.onChange} value={password}/> 
+                        <input className="form-control" type="password" name="password" onChange={this.onChange} value={password}/> 
                     </div>
                     <div className="form-group">
                         <label>Confirm Password</label>
-                        <input className="form-control" type="email" name="password2" onChange={this.onChange} value={password2}/> 
+                        <input className="form-control" type="password" name="password2" onChange={this.onChange} value={password2}/> 
                     </div>
+                    <div className="form-group">
+                        <button className="btn btn-primary" type="submit">Register</button>
+                    </div>
+                    <p>Already have an account? <Link to="/login">Login</Link></p>
                 </form>
             </div>
         )
