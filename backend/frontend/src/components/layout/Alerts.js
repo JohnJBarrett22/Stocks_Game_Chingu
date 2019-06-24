@@ -7,7 +7,6 @@ export class Alerts extends Component {
     static propTypes = {
         error: PropTypes.object.isRequired,
         message: PropTypes.object.isRequired
-
     };
 
     componentDidUpdate(prevProps) {
@@ -24,7 +23,7 @@ export class Alerts extends Component {
             } if(error.msg.password){
                 alert.error(`Password: ${error.msg.password.join()}`);
             }
-        }
+        };
         if(message !== prevProps.message) {
             if(message.deleteLead) {
                 alert.success(message.deleteLead);
@@ -33,7 +32,7 @@ export class Alerts extends Component {
                 alert.success(message.addLead);
             }
         }
-    }
+    };
 
     render() {
         return <Fragment />;
@@ -43,6 +42,6 @@ export class Alerts extends Component {
 const mapStateToProps = state => ({
     error: state.errors,
     message: state.messages
-})
+});
 
 export default connect(mapStateToProps)(withAlert()(Alerts));
